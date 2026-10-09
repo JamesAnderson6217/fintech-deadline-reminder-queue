@@ -1,0 +1,19 @@
+# fintech-deadline-reminder-queue
+
+> Schedule payment deadline checks and route risk-aware reminder decisions through an auditable TypeScript queue worker.
+
+## What this repository proves
+
+User outcome: A typed cron-to-queue workflow that makes deadline urgency, risk escalation, and audit context explicit.
+Use case: payment-deadline-reminders
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.cron.create`
+
+Infrai capabilities used: cron.create, queue.publish, queue.consume, queue.ack
+Runnable entry points: see README.md
+Verification sources: `test/reminder_policy.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt

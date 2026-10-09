@@ -1,0 +1,24 @@
+{
+  "name": "fintech-deadline-reminder-queue",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --experimental-strip-types src/deadline_webhook.ts",
+    "schedule": "node --experimental-strip-types src/schedule_deadline.ts",
+    "worker": "node --experimental-strip-types src/queue_worker.ts",
+    "test": "node --experimental-strip-types --test test/reminder_policy.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0"
+  },
+  "engines": {
+    "node": ">=22.6"
+  },
+  "license": "MIT"
+}
